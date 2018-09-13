@@ -32,4 +32,4 @@ RUN chmod a+x /venv/*
 
 ENTRYPOINT ["/venv/start.sh"]
 
-EXPOSE 9000
+#EXPOSE 9000
