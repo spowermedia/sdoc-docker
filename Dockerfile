@@ -1,15 +1,15 @@
 FROM centos
 MAINTAINER LuanVU<vuluanbg@gmail.com>
 
-RUN yum –y update
+#RUN yum –y update
 
 #Install wget
 RUN yum install -y wget
 
 #Install Java 10.0.2
-#RUN wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.rpm
+RUN wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.rpm
 
-#RUN yum localinstall jdk-10.0.2_linux-x64_bin.rpm
+RUN yum localinstall -y jdk-10.0.2_linux-x64_bin.rpm
 
 #Install sbt
 #RUN wget https://dl.bintray.com/sbt/rpm/sbt-1.2.1.rpm
